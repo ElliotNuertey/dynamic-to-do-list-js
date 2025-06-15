@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         removeButton.textContent = 'Remove';
         removeButton.className = 'remove-btn';
 
-        // Add click event to remove the task
+        // Assign event to remove the li when the button is clicked
         removeButton.onclick = function () {
             taskList.removeChild(li);
         };
@@ -40,16 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
         taskInput.value = '';
     }
 
-    // Event listener for button click
+    // Add event listener to the "Add Task" button
     addButton.addEventListener('click', addTask);
 
-    // Event listener for pressing Enter in the input field
+    // Add event listener to input for pressing the "Enter" key
     taskInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             addTask();
         }
     });
-
-    // Optionally call addTask on load if needed (initial tasks, etc.)
-    // For now, this is just part of setup as per instructions.
 });
